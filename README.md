@@ -1,1 +1,14 @@
-## This is an amazingly phenom README ....
+## OVERVIEW
+1.
+
+
+## TOPICS
+1.
+2.
+3.
+
+
+## HOW TO RUN "FOOD TRUCK APP"
+1.
+2.
+3.
