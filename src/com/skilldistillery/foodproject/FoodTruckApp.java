@@ -79,7 +79,7 @@ public class FoodTruckApp {
 			additionalBNewTruck(bNewTruck);
 			count++;
 		}
-		kb.close();
+//		kb.close();
 
 		int select = 0;
 
