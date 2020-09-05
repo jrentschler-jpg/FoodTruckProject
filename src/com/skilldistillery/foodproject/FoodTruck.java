@@ -13,7 +13,8 @@ public class FoodTruck {
 
 	}
 //	Methods ctor (constructors)
-	public FoodTruck(String name, String type, double rating) {
+	public FoodTruck(int nextUniqueNumTruckId, String name, String type, double rating) {
+		this.nextUniqueNumTruckId = FoodTruck.uniqueNumTruckId++;
 		this.name = name;
 		this.type = type;
 		this.rating = rating;
@@ -65,7 +66,7 @@ public class FoodTruck {
 		return "FoodTruck [nextUniqueNumTruckId=" + nextUniqueNumTruckId + ", name=" + name + ", type=" + type
 				+ ", rating=" + rating + "]";
 	}
-	public void displayFoodTruck() {
+	public void displaybrandNewTruck() {
 		String FoodTruck = this.toString();
 		System.out.println(FoodTruck);
 		
