@@ -114,6 +114,12 @@ public class FoodTruckApp {
 			}
 //			select 4: Quit the program.
 		} while (select != 4);
+		System.out.println("------------------------------------------------------------------------------");
+		System.out.println("-----****-----***-----***-----***-----***-----***-----***-----***-----***-----");
+		System.out.println("THANK YOU FOR INPUTING YOUR FOOD TRUCKS AND GIVING THEM AWESOME RATINGS!");
+		System.out.println(" DON'T FORGET: KEEP ON {FOODIE FOOD TRUCKIN!} ");
+		System.out.println("-----****-----***-----***-----***-----***-----***-----***-----***-----***-----");
+		System.out.println("------------------------------------------------------------------------------");
 
 	}
 
