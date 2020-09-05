@@ -17,7 +17,7 @@ public class FoodTruckApp {
 //	METHOD 1: GENERATE USER OUTPUT
 	private void generate() {
 		int count = 0;
-//		user story #1
+//		user story #1 - is prompted to input the name, food type, and rating for up to five food trucks.
 		Scanner kb = new Scanner(System.in);
 		String inputName = "";
 		String inputType = "";
@@ -52,7 +52,8 @@ public class FoodTruckApp {
 		System.out.println("--------------------------------------------------------------");
 		System.out.println("-----****-----***-----***-----***-----***-----***-----***-----");
 
-//		user story #2
+//		user story #2 If the user inputs quit for the food truck name, input ends immediately and the program continues.
+//		user story #4 After choosing a menu item, the user sees the menu again and can choose another item until the choose to quit.
 		while (count < 5) {
 			System.out.println("Please Enter Food Truck's Name: ");
 			inputName = kb.nextLine();
@@ -87,13 +88,15 @@ public class FoodTruckApp {
 //			have the user input their entry selections here 
 
 			System.out.println("-----****-----***-----***-----***-----***-----***-----***-----***-----***-----");
-			System.out.println("------------------------------------");
+			System.out.println("------------------------------------------------------------------------------");
+			System.out.println();
 			System.out.println("{} SELECT(1) OPTION: TO SEE THE LISTING OF ALL EXISTING FOOD TRUCKS. ");
 			System.out.println("{} SELECT(2) OPTION: TO SEE THE 'AVERAGE RATING' OF THE FOOD TRUCKS. ");
 			System.out.println("{} SELECT(3) OPTION: TO DISPLAY THE 'HIGHEST-RATED' FOOD TRUCKS. ");
 			System.out.println("{} SELECT(4) OPTION: IF YOU ARE FINISHED, AND ARE READY TO QUIT THE PROGRAM. ");
-			System.out.println("------------------------------------");
-			System.out.println("------------------------------------");
+			System.out.println();
+			System.out.println("------------------------------------------------------------------------------");
+			System.out.println("-----****-----***-----***-----***-----***-----***-----***-----***-----***-----");
 
 			select = kb.nextInt();
 //			select 1: List all existing food trucks.
@@ -138,7 +141,7 @@ public class FoodTruckApp {
 			sum = sum + ratings;
 		}
 		average = (sum / brandNewTruck.length);
-		System.out.println("The 'Average Rating' For The List Of Food Trucks is: " + average);
+		System.out.println("The 'Average Rating' For The List Of Food Trucks is:  " + average);
 
 	}
 
@@ -150,10 +153,8 @@ public class FoodTruckApp {
 
 	private void getHighest(FoodTruck[] brandNewTrucks) {
 		double highest = 0;
-//				String getName() = name;
-//				String getType() = type;
-				int indexOfHighestRating = 0;
-				
+		int indexOfHighestRating = 0;
+
 		for (int i = 0; i < brandNewTrucks.length; i++) {
 			double ratings = brandNewTrucks[i].getRating();
 
@@ -163,13 +164,14 @@ public class FoodTruckApp {
 			}
 
 		}
-		
+
+		System.out.println("-----***-----***-----***-----***-----***-----***-----***------");
 		System.out.println("--------------------------------------------------------------");
+		System.out.println("THE HIGHEST RATED FOOD TRUCK IS: ");
 		System.out.println(brandNewTrucks[indexOfHighestRating].toString());
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
+		System.out.println("--------------------------------------------------------------");
+		System.out.println("-----***-----***-----***-----***-----***-----***-----***------");
+		
 
 	}
 }

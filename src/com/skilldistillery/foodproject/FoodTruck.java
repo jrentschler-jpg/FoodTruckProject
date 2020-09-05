@@ -7,11 +7,12 @@ public class FoodTruck {
 	private String name;
 	private String type;
 	private double rating;
-	
+
 //	default ctor(constructor)
 	public FoodTruck() {
 
 	}
+
 //	Methods ctor (constructors)
 	public FoodTruck(int nextUniqueNumTruckId, String name, String type, double rating) {
 		this.nextUniqueNumTruckId = FoodTruck.uniqueNumTruckId++;
@@ -24,6 +25,7 @@ public class FoodTruck {
 	public int getNextUniqueNumTruckId() {
 		return nextUniqueNumTruckId;
 	}
+
 //		setter:
 	public void setNextUniqueNumTruckId() {
 		this.nextUniqueNumTruckId = FoodTruck.uniqueNumTruckId++;
@@ -58,18 +60,18 @@ public class FoodTruck {
 	public void setRating(double rating) {
 		this.rating = rating;
 	}
-	
-	
+
 	@Override
 	public String toString() {
-		
+
 		return "FoodTruck [nextUniqueNumTruckId=" + nextUniqueNumTruckId + ", name=" + name + ", type=" + type
 				+ ", rating=" + rating + "]";
 	}
+
 	public void displaybrandNewTruck() {
 		String FoodTruck = this.toString();
 		System.out.println(FoodTruck);
-		
+
 	}
-	
+
 }
