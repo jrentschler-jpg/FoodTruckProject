@@ -34,7 +34,6 @@ public class FoodTruckApp {
 
 		System.out.println("-----****-----***-----***-----***-----***-----***-----***-----");
 		System.out.println("--------------------------------------------------------------");
-		System.out.println("{} GO AHEAD AND RATE THE FIVE FOOD TRUCKS.");
 		System.out.println("{} PLEASE PROVIDE THE NAME, FOOD TYPE, AND RATING (0-10 SCALE) FOR THE FIVE FOOD TRUCKS.");
 		System.out.println("{} THE SCALE FOR THE RATING WILL BE DEFINED AS FOLLOWS: ");
 		System.out.println("{} SCALE: 0  ---> THE LEAST FAVORITE THING YOU HAVE EVER ATE!");
@@ -70,7 +69,8 @@ public class FoodTruckApp {
 			System.out.println("Please Enter Food Truck's Rating (0-10 scale): ");
 			inputRating = kb.nextDouble();
 			kb.nextLine();
-
+			
+// 			capturing the users input - and storing it in an array 
 			bNewTruck = new FoodTruck();
 			bNewTruck.setName(inputName);
 			bNewTruck.setType(inputType);
@@ -122,7 +122,7 @@ public class FoodTruckApp {
 		System.out.println("------------------------------------------------------------------------------");
 
 	}
-
+// displays the selection option 1: users input of all the food trucks and their information
 	private void additionalBNewTruck(FoodTruck brandNewTruck2) {
 		foodTruckArr[index] = brandNewTruck2;
 		index++;
@@ -138,10 +138,11 @@ public class FoodTruckApp {
 		}
 		return copyTrucks;
 	}
-
+// 	Displays the selection 2 for the average of all the food trucks combined
 	private void getAverage(FoodTruck[] brandNewTruck) {
 		double average = 0;
 		double sum = 0;
+		
 		for (FoodTruck bNewTruck : brandNewTruck) {
 			double ratings = bNewTruck.getRating();
 			sum = sum + ratings;
@@ -156,7 +157,7 @@ public class FoodTruckApp {
 			bNewTruck.displaybrandNewTruck();
 		}
 	}
-
+//  Displays selection 3: for the highest rated food truck
 	private void getHighest(FoodTruck[] brandNewTrucks) {
 		double highest = 0;
 		int indexOfHighestRating = 0;
